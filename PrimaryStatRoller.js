@@ -29,7 +29,7 @@ const FullStat = (lowestTotal) => {
   const stats = [ThreeDSix(), ThreeDSix(), ThreeDSix(), FourDSix(), FourDSix(), FourDSix()]
   const total = stats[0] + stats[1] + stats[2] + stats[3] + stats[4] + stats[5]
   if (total >= lowestTotal) {
-  return [stats, total]
+  return `Your stats are ${stats} for a total of ${total}`
   }
   return FullStat(lowestTotal)
 }
