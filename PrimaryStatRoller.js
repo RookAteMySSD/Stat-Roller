@@ -33,6 +33,3 @@ const FullStat = (lowestTotal) => {
   }
   return FullStat(lowestTotal)
 }
-
-let Stat = FullStat(70)
-console.log(Stat)
