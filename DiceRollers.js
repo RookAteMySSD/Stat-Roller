@@ -1,41 +1,41 @@
 //Roller
-const Roll = (Dice, Bonus) => {
-  const roll = Math.floor(Math.random() * Dice + 1)
-  let total = roll + (Bonus || 0)
+const Roll = (dice, bonus) => {
+  const roll = Math.floor(Math.random() * dice + 1)
+  let total = roll + (bonus || 0)
   return total
 }
 
 //1d4
-const DFour = (Bonus) => {
-  return Roll(4, Bonus)
+const dFour = (bonus) => {
+  return Roll(4, bonus)
 }
 
 //1d6
-const DSix = (Bonus) => {
-  return Roll(6, Bonus)
+const dSix = (bonus) => {
+  return Roll(6, bonus)
 }
 
 //1d8
-const DEight = (Bonus) => {
-  return Roll(8, Bonus)
+const dEight = (bonus) => {
+  return Roll(8, bonus)
 }
 
 //1d10
-const DTen = (Bonus) => {
-  return Roll(10, Bonus)
+const dTen = (bonus) => {
+  return Roll(10, bonus)
 }
 
 //1d12
-const DTwelve = (Bonus) => {
-  return Roll(12, Bonus)
+const dTwelve = (bonus) => {
+  return Roll(12, bonus)
 }
 
 //1d20
-const DTwenty = (Bonus) => {
+const dTwenty = (Bonus) => {
   return Roll(20, Bonus)
 }
 
 //1d100
-const DOneHundred = (Bonus) => {
-  return Roll(100, Bonus)
+const dOneHundred = (bonus) => {
+  return Roll(100, bonus)
 }
