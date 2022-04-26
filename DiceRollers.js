@@ -31,8 +31,8 @@ const dTwelve = (bonus) => {
 }
 
 //1d20
-const dTwenty = (Bonus) => {
-  return Roll(20, Bonus)
+const dTwenty = (bonus) => {
+  return Roll(20, bonus)
 }
 
 //1d100
