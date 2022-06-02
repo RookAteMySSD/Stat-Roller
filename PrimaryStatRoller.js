@@ -26,6 +26,7 @@ const fourDSix = () => {
 
 //Full Stat Array with 3-3d6 and 3-4d6
 const fullStat = (lowestTotal) => {
+  lowestTotal = lowestTotal || 0
   const stats = [threeDSix(), threeDSix(), threeDSix(), fourDSix(), fourDSix(), fourDSix()]
   const total = stats[0] + stats[1] + stats[2] + stats[3] + stats[4] + stats[5]
   if (total >= lowestTotal) {
