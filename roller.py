@@ -1,6 +1,5 @@
 from random import randrange
 from dice import d6
-from dice import d6
 
 
 def ThreeDSix():
