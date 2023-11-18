@@ -1,39 +1,31 @@
 from random import randrange
-from dice import d6
+from dice import dice
 
 
 def ThreeDSix():
-    total = d6() + d6() + d6()
+    total = dice(6) + dice(6) + dice(6)
     return total
 
 def FourDSix():
     total = 0
     min = 7
     for i in range(4):
-        diceRoll = d6()
+        diceRoll = dice(6)
         total += diceRoll
         if diceRoll < min:
             min = diceRoll
     return total - min
 
-def Stats():
+def Stats(minimum = 70):
     stats = []
     for i in range(3):
         stats.append(ThreeDSix())
     for i in range(3):
         stats.append(FourDSix())  
     total = sum(stats)
-    if total < 70:
-        print("Total: ", total)
-        print("Stats: ", stats)
-        print("Total too low, rerolling...")
+    if total < minimum:
         Stats()
-    else:  
+    else:
+        stats.sort(reverse=True)
         print("Total: ", total)
         print("Stats: ", stats)
-
-if __name__ == "__main__":
-    Stats()
-
-
-
