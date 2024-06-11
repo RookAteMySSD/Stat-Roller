@@ -6,9 +6,7 @@ def diceMenu():
     input2 = input("Type it in the format '3d6'")
 
     d = input2.find("d")
-    diceType = input2[d+1:]
-
-    print(diceType)
+    diceType = int(input2[d+1:])
     for i in range(int(input2[0:d])):
         print(dice.dice(diceType), end = " ")
     print()
